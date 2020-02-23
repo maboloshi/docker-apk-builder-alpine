@@ -13,9 +13,7 @@ RUN    apk update \
 # https://wiki.alpinelinux.org/wiki/Abuild_and_Helpers
     && adduser -S builder -G abuild
 
+WORKDIR /home/builder
+
 USER builder
-
-RUN mkdir /work
-WORKDIR /work
-
 CMD ["bash"]
