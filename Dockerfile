@@ -4,6 +4,7 @@ LABEL Description=".APK packages build environment, Alpine Linux latest" Vendor=
 
 RUN    apk update \
     && apk add \
+           bash \
            alpine-sdk \
     && useradd -r -g abuild builder
 
